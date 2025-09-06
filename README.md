@@ -1,4 +1,12 @@
-# Internship Task 1
-This is my first Python project for my internship.
-- Task: Number guessing game
-- Language: Python
+import random
+print("Welcome to the Number Guessing Game! ")
+secret_number = random.randint(1, 10)
+while True:
+    guess = int(input("Enter your guess (1 to 10): "))
+    if guess < secret_number:
+        print("Too low! Try again.")
+    elif guess > secret_number:
+        print("Too high! Try again.")
+    else:
+        print(" Correct! You win! ")
+        break
